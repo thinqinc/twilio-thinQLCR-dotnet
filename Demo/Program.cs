@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwilioWithThinq;
+using TwilioWithThinQLCR;
+using Twilio;
 
 namespace Demo
 {
@@ -11,8 +12,14 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            TwilioWrapper wrapper = new TwilioWrapper("ACa5a21802beff96f147d40bf98c957038", "7852c807435af28d468344ca57a49d2a", "11001", "0c82a54f22f775a3ed8b97b2dea74036");
-            Console.WriteLine("Call sid: " + wrapper.call("19193365890", "19192334784"));
+            TwilioWrapper wrapper = new TwilioWrapper("twilio-sid", "twilio-token", "thinq-account-id", "thinq-token");
+            CallOptions callOptions = new CallOptions();
+            callOptions.To = "19195551234";
+            callOptions.From = "19198900000";
+            callOptions.Url = "http://twilio.example.com/twilio.xml";
+
+            Call call = wrapper.call(callOptions);
+            Console.WriteLine("Call sid: " + call.Sid);
             Console.ReadLine();
         }
     }

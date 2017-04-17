@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ThinQ.TwilioWithThinQLCR</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>andyclarke</authors>
+    <owners>andyclarke</owners>
+    <projectUrl>http://thinq.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Fixes for Twilio SDK 4.X.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>twilio thinq lcr</tags>
+  </metadata>
+</package>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioWithThinq", "TwilioWithThinq\TwilioWithThinq.csproj", "{5A65E721-64FF-470A-A302-27F356227C40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioWithThinQLCR", "TwilioWithThinq\TwilioWithThinQLCR.csproj", "{5A65E721-64FF-470A-A302-27F356227C40}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{88AE7AA4-0E04-4F2B-8B34-02C18EAC6D10}"
 EndProject

@@ -7,8 +7,8 @@
     <ProjectGuid>{5A65E721-64FF-470A-A302-27F356227C40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TwilioWithThinq</RootNamespace>
-    <AssemblyName>TwilioWithThinq</AssemblyName>
+    <RootNamespace>TwilioWithThinQLCR</RootNamespace>
+    <AssemblyName>TwilioWithThinQLCR</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\TwilioWithThinq.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\TwilioWithThinQLCR.xml</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Release\TwilioWithThinq.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\TwilioWithThinQLCR.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RestSharp, Version=105.2.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TwilioThinqException.cs" />
     <Compile Include="TwilioWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
