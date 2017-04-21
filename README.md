@@ -6,12 +6,10 @@ Example usage:
 
 ```C#
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TwilioWithThinQLCR;
 using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace Demo
 {
@@ -19,14 +17,53 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            TwilioWrapper wrapper = new TwilioWrapper("twilio-sid", "twilio-token", "thinq-account-id", "thinq-token");
-            CallOptions callOptions = new CallOptions();
-            callOptions.To = "19195551234";
-            callOptions.From = "19198900000";
-            callOptions.Url = "http://twilio.example.com/twilio.xml";
+            //
+            // Example using a callOptions object
+            //
 
-            Call call = wrapper.call(callOptions);
+            // Initialize the Twilio rest client using your Twilio SID and Token.
+            TwilioClient.Init("twilioSid", "twilioToken");
+
+            // Create a thinQ callOptions object, passing in your thinQ ID and ThinQ Token.
+            CreateCallOptionsWithThinQLCR callOptions = new CreateCallOptionsWithThinQLCR("thinqAccountId", "thinqToken", new PhoneNumber("19195551234"), new PhoneNumber("19198900000"));
+            // Populate your callOptions object with any additional parameters like normal.
+            callOptions.Url = new Uri("http://twilio.example.com/xml/twilio-custom.xml");
+
+            // Create your call as you normally would.
+            var call = CallResource.Create(callOptions);
             Console.WriteLine("Call sid: " + call.Sid);
+            Console.ReadLine();
+
+
+        
+            //
+            // Example using the thinQ wrapper
+            //
+
+            // Create a wrapper object, psasing in your Twilio SID, Twilio Token, thinQ ID and thinQ Token.
+            TwilioWrapper wrapper = new TwilioWrapper("twilioSid", "twilioToken", "thinqAccountId", "thinqToken");
+
+            // Call the createCall method on the wrapper as normal.
+            var call2 = wrapper.createCall(new PhoneNumber("19195551234"), new PhoneNumber("19198900000"), url: new Uri("http://twilio.example.com/xml/twilio-custom.xml"));
+            Console.WriteLine("Call2 sid: " + call2.Sid);
+            Console.ReadLine();
+
+
+            //
+            // Example using the thinQ wrapper and callOptions.
+            //
+
+            // Create a wrapper object, psasing in your Twilio SID, Twilio Token, thinQ ID and thinQ Token.
+            TwilioWrapper wrapper2 = new TwilioWrapper("twilioSid", "twilioToken", "thinqAccountId", "thinqToken");
+
+            // Create a callOptions object, passing in your to and from numbers.
+            CreateCallOptions callOptions2 = new CreateCallOptions(new PhoneNumber("19195551234"), new PhoneNumber("19198900000"));
+            // Populate your callOptions object with any additional parameters like normal.
+            callOptions2.Url = new Uri("http://twilio.example.com/twilio.xml");
+
+            // Call the createCall method on the wrapper as normal.
+            CallResource call3 = wrapper2.createCall(callOptions);
+            Console.WriteLine("Call sid: " + call3.Sid);
             Console.ReadLine();
         }
     }
