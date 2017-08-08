@@ -9,7 +9,7 @@
     <projectUrl>http://thinq.com</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Fixes for Twilio SDK 4.X.</releaseNotes>
+    <releaseNotes>Fixes for Twilio SDK 5.X.</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>twilio thinq lcr</tags>
   </metadata>
