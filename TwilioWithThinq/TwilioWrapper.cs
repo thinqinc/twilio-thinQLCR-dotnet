@@ -93,8 +93,8 @@ namespace TwilioWithThinQLCR
             optionsWithThinQLCR.ApplicationSid = options.ApplicationSid;
             optionsWithThinQLCR.Url = options.Url;
             optionsWithThinQLCR.PathAccountSid = options.PathAccountSid;
-            //optionsWithThinQLCR.MachineDetection = options.MachineDetection;
-            //optionsWithThinQLCR.MachineDetectionTimeout = options.MachineDetectionTimeout;
+            optionsWithThinQLCR.MachineDetection = options.MachineDetection;
+            optionsWithThinQLCR.MachineDetectionTimeout = options.MachineDetectionTimeout;
 
             return CallResource.Create(optionsWithThinQLCR, client);
         }
@@ -134,8 +134,8 @@ namespace TwilioWithThinQLCR
             optionsWithThinQLCR.ApplicationSid = options.ApplicationSid;
             optionsWithThinQLCR.Url = options.Url;
             optionsWithThinQLCR.PathAccountSid = options.PathAccountSid;
-            //optionsWithThinQLCR.MachineDetection = options.MachineDetection;
-            //optionsWithThinQLCR.MachineDetectionTimeout = options.MachineDetectionTimeout;
+            optionsWithThinQLCR.MachineDetection = options.MachineDetection;
+            optionsWithThinQLCR.MachineDetectionTimeout = options.MachineDetectionTimeout;
 
             return await CallResource.CreateAsync(optionsWithThinQLCR, client);
         }
@@ -196,8 +196,8 @@ namespace TwilioWithThinQLCR
             optionsWithThinQLCR.ApplicationSid = applicationSid;
             optionsWithThinQLCR.Url = url;
             optionsWithThinQLCR.PathAccountSid = pathAccountSid;
-            //optionsWithThinQLCR.MachineDetection = machineDetection;
-            //optionsWithThinQLCR.MachineDetectionTimeout = machineDetectionTimeout;
+            optionsWithThinQLCR.MachineDetection = machineDetection;
+            optionsWithThinQLCR.MachineDetectionTimeout = machineDetectionTimeout;
 
             return CallResource.Create(optionsWithThinQLCR, client);
         }
@@ -258,8 +258,8 @@ namespace TwilioWithThinQLCR
             optionsWithThinQLCR.ApplicationSid = applicationSid;
             optionsWithThinQLCR.Url = url;
             optionsWithThinQLCR.PathAccountSid = pathAccountSid;
-            //optionsWithThinQLCR.MachineDetection = machineDetection;
-            //optionsWithThinQLCR.MachineDetectionTimeout = machineDetectionTimeout;
+            optionsWithThinQLCR.MachineDetection = machineDetection;
+            optionsWithThinQLCR.MachineDetectionTimeout = machineDetectionTimeout;
 
             return await CallResource.CreateAsync(optionsWithThinQLCR, client);
         }

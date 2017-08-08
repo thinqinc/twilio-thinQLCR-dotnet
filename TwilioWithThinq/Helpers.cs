@@ -25,7 +25,7 @@ namespace TwilioWithThinQLCR
             // Check to see that this isn't alreadt a SIP call.
             if (numberToFormat != null && !numberToFormat.ToString().StartsWith("sip:"))
             {
-                return new PhoneNumber("sip:" + numberToFormat.ToString() + "@" + THINQ_DOMAIN + "?thinQid=" + thinQ_id + "%26thinQtoken=" + thinQ_token);
+                return new PhoneNumber("sip:" + numberToFormat.ToString() + "@" + THINQ_DOMAIN + "?thinQid=" + thinQ_id + "&thinQtoken=" + thinQ_token);
             }
 
             return (PhoneNumber) numberToFormat;
