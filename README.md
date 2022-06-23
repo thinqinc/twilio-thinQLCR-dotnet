@@ -1,5 +1,8 @@
 # Twilio .NET SDK 5.X Wrapper Library For thinQ LCR integration
 
+**This package is no longer maintainted. You should use the rest API instead**
+--------------------------------------------------------------------------
+
 #### Note that you will need a valid LCR Account with thinQ before using the libraries. For more information please contact your thinQ Sales representative at [http://www.thinq.com](http://www.thinq.com)
 
 Example usage:
